@@ -7,7 +7,7 @@ const Portfolio = () => {
     {
       title: 'EKO Mini - Coastal Retreat',
       location: 'Jūrmala, Latvia',
-      image: 'https://images.pexels.com/photos/2581922/pexels-photo-2581922.jpeg?auto=compress&cs=tinysrgb&w=1600'
+      image: '/images/coastal-retreat.png'
     },
     {
       title: 'EKO Mini - Forest Hideaway',
