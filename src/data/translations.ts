@@ -15,7 +15,7 @@ const translations: Translations = {
     'nav.portfolio': 'Portfolio',
     'nav.about': 'Par mums',
     'nav.contact': 'Sazināties',
-    'nav.quote': 'Saņemt piedāvājumu',
+    'nav.quote': 'Piedāvājums',
     
     // Hero
     'hero.title': 'Ekoloģiskas modulārās mājas',

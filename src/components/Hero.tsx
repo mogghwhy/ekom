@@ -8,12 +8,12 @@ const Hero = () => {
       id="home" 
       className="pt-24 md:pt-32 pb-16 md:pb-24 min-h-screen flex items-center relative"
       style={{
-        backgroundImage: 'url("https://images.pexels.com/photos/3936821/pexels-photo-3936821.jpeg?auto=compress&cs=tinysrgb&w=1600")',
+        backgroundImage: 'url("/images/modular-house-blueprint-concept.png")',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="container mx-auto px-4 z-10 relative">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">

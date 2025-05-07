@@ -8,11 +8,11 @@ const EkoMini = () => {
   
   const images = [
     {
-      src: "https://images.pexels.com/photos/6489111/pexels-photo-6489111.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      src: "/images/modular-house-concept.png",
       alt: "EKO Mini exterior view"
     },
     {
-      src: "https://images.pexels.com/photos/6758773/pexels-photo-6758773.jpeg?auto=compress&cs=tinysrgb&w=1600",
+      src: "/images/modular-house-blueprint-concept.png",
       alt: "EKO Mini floor plan"
     }
   ];
