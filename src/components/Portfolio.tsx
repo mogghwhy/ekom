@@ -5,18 +5,18 @@ const Portfolio = () => {
   
   const projects = [
     {
-      title: 'EKO Mini - Coastal Retreat',
-      location: 'Jūrmala, Latvia',
+      titleKey: 'portfolio.coastal.title',
+      locationKey: 'portfolio.coastal.location',
       image: '/images/coastal-retreat.png'
     },
     {
-      title: 'EKO Mini - Forest Hideaway',
-      location: 'Cēsis, Latvia',
+      titleKey: 'portfolio.forest.title',
+      locationKey: 'portfolio.forest.location',
       image: '/images/forest-hideaway.png'
     },
     {
-      title: 'EKO Mini - Lakeside Cabin',
-      location: 'Liepāja, Latvia',
+      titleKey: 'portfolio.lake.title',
+      locationKey: 'portfolio.lake.location',
       image: '/images/lakeside-cabin.png'
     }
   ];
@@ -42,13 +42,13 @@ const Portfolio = () => {
               <div className="h-64 overflow-hidden">
                 <img 
                   src={project.image} 
-                  alt={project.title} 
+                  alt={t(project.titleKey)} 
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-xl font-semibold text-[#3d550c] mb-2">{project.title}</h3>
-                <p className="text-gray-600">{project.location}</p>
+                <h3 className="text-xl font-semibold text-[#3d550c] mb-2">{t(project.titleKey)}</h3>
+                <p className="text-gray-600">{t(project.locationKey)}</p>
               </div>
             </div>
           ))}
