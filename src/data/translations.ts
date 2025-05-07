@@ -51,6 +51,12 @@ const translations: Translations = {
     // Portfolio
     'portfolio.title': 'Portfolio',
     'portfolio.subtitle': 'Iepazīstieties ar mūsu realizētajiem projektiem',
+    'portfolio.coastal.title': 'EKO Mini - Jūrmalas atpūta',
+    'portfolio.coastal.location': 'Jūrmala, Latvija',
+    'portfolio.forest.title': 'EKO Mini - Meža patvērums',
+    'portfolio.forest.location': 'Cēsis, Latvija',
+    'portfolio.lake.title': 'EKO Mini - Ezera krastā',
+    'portfolio.lake.location': 'Liepāja, Latvija',
     
     // About
     'about.title': 'Par mums',
@@ -141,6 +147,12 @@ const translations: Translations = {
     // Portfolio
     'portfolio.title': 'Portfolio',
     'portfolio.subtitle': 'Explore our completed projects',
+    'portfolio.coastal.title': 'EKO Mini - Coastal Retreat',
+    'portfolio.coastal.location': 'Jurmala, Latvia',
+    'portfolio.forest.title': 'EKO Mini - Forest Hideaway',
+    'portfolio.forest.location': 'Cesis, Latvia',
+    'portfolio.lake.title': 'EKO Mini - Lakeside Cabin',
+    'portfolio.lake.location': 'Liepaja, Latvia',
     
     // About
     'about.title': 'About Us',
@@ -158,13 +170,13 @@ const translations: Translations = {
     'testimonials.title': 'Customer Testimonials',
     'testimonial1.text': 'The EKO-MĀJAS team installed our EKO Mini in just 5 days! Truly impressive work and quality.',
     'testimonial1.author': 'Jānis Bērziņš',
-    'testimonial1.location': 'Liepāja',
+    'testimonial1.location': 'Liepaja',
     'testimonial2.text': 'We were looking for a sustainable and modern solution, and EKO Mini was the perfect choice. Thank you, EKO-MĀJAS team!',
     'testimonial2.author': 'Anna Kalna',
-    'testimonial2.location': 'Cēsis',
+    'testimonial2.location': 'Cesis',
     'testimonial3.text': 'Amazing quality and attention to detail. Our EKO Mini is energy-efficient and aesthetically beautiful.',
     'testimonial3.author': 'Kārlis Ozols',
-    'testimonial3.location': 'Jūrmala',
+    'testimonial3.location': 'Jurmala',
     
     // Contact
     'contact.title': 'Contact Us',
@@ -190,4 +202,4 @@ const translations: Translations = {
   },
 };
 
-export default translations;
+export default translations
