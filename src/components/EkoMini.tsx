@@ -26,13 +26,13 @@ const EkoMini = () => {
   };
   
   const specifications = [
-    { key: 'ekomini.area', value: '25m²' },
-    { key: 'ekomini.structure', value: 'Wooden frame' },
-    { key: 'ekomini.insulation', value: 'Eco wool' },
-    { key: 'ekomini.solar', value: 'Included' },
-    { key: 'ekomini.efficiency', value: 'A+ class' },
-    { key: 'ekomini.installation', value: '1 week' },
-    { key: 'ekomini.mobile', value: 'Yes' },
+    { key: 'ekomini.area', valueKey: 'ekomini.area.value' },
+    { key: 'ekomini.structure', valueKey: 'ekomini.structure.value' },
+    { key: 'ekomini.insulation', valueKey: 'ekomini.insulation.value' },
+    { key: 'ekomini.solar', valueKey: 'ekomini.solar.value' },
+    { key: 'ekomini.efficiency', valueKey: 'ekomini.efficiency.value' },
+    { key: 'ekomini.installation', valueKey: 'ekomini.installation.value' },
+    { key: 'ekomini.mobile', valueKey: 'ekomini.mobile.value' },
   ];
   
   const benefits = [
@@ -115,7 +115,7 @@ const EkoMini = () => {
                   {specifications.map((spec, index) => (
                     <tr key={index} className={index !== specifications.length - 1 ? 'border-b border-gray-200' : ''}>
                       <td className="py-3 font-medium text-gray-700">{t(spec.key)}</td>
-                      <td className="py-3 text-gray-900">{spec.value}</td>
+                      <td className="py-3 text-gray-900">{t(spec.valueKey)}</td>
                     </tr>
                   ))}
                 </tbody>

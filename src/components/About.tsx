@@ -7,23 +7,23 @@ const About = () => {
   const values = [
     {
       icon: <Leaf size={36} className="text-[#81b622]" />,
-      title: 'Sustainability',
-      description: 'We use eco-friendly materials and technologies to minimize our environmental impact.'
+      titleKey: 'about.values.sustainability.title',
+      descriptionKey: 'about.values.sustainability.description'
     },
     {
       icon: <Clock size={36} className="text-[#81b622]" />,
-      title: 'Efficiency',
-      description: 'Our modular solutions are designed for quick installation and optimal energy use.'
+      titleKey: 'about.values.efficiency.title',
+      descriptionKey: 'about.values.efficiency.description'
     },
     {
       icon: <Recycle size={36} className="text-[#81b622]" />,
-      title: 'Innovation',
-      description: 'We constantly research and implement new, sustainable building methods.'
+      titleKey: 'about.values.innovation.title',
+      descriptionKey: 'about.values.innovation.description'
     },
     {
       icon: <Award size={36} className="text-[#81b622]" />,
-      title: 'Quality',
-      description: 'Every EKO-MĀJAS house is built to the highest standards of craftsmanship.'
+      titleKey: 'about.values.quality.title',
+      descriptionKey: 'about.values.quality.description'
     }
   ];
 
@@ -52,8 +52,8 @@ const About = () => {
                     className="bg-white rounded-lg p-5 shadow-sm hover:shadow-md transition-shadow"
                   >
                     <div className="mb-3">{value.icon}</div>
-                    <h3 className="text-xl font-semibold text-[#3d550c] mb-2">{value.title}</h3>
-                    <p className="text-gray-600 text-sm">{value.description}</p>
+                    <h3 className="text-xl font-semibold text-[#3d550c] mb-2">{t(value.titleKey)}</h3>
+                    <p className="text-gray-600 text-sm">{t(value.descriptionKey)}</p>
                   </div>
                 ))}
               </div>

@@ -16,7 +16,7 @@ const Footer = () => {
               EKO-MĀJAS
             </div>
             <p className="opacity-80 mb-4">
-              Sustainable modular homes for modern living.
+              {t('footer.description')}
             </p>
             <div className="flex items-center">
               <Mail size={18} className="mr-2 opacity-80" />
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.quickLinks')}</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#home" className="flex items-center hover:text-[#ecf87f] transition-colors">
@@ -63,20 +63,20 @@ const Footer = () => {
           </div>
           
           <div>
-            <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
+            <h3 className="text-lg font-semibold mb-4">{t('footer.newsletter')}</h3>
             <p className="opacity-80 mb-4">
-              Subscribe to receive updates about our latest projects and offers.
+              {t('footer.newsletterDescription')}
             </p>
             <div className="flex">
               <input 
                 type="email" 
-                placeholder="Your email" 
+                placeholder={t('footer.emailPlaceholder')}
                 className="flex-1 px-3 py-2 text-gray-700 rounded-l-md focus:outline-none"
               />
               <button 
                 className="bg-[#81b622] hover:bg-[#59981a] transition-colors px-4 py-2 rounded-r-md"
               >
-                Subscribe
+                {t('footer.subscribe')}
               </button>
             </div>
           </div>
