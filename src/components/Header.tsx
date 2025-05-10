@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { Menu, X, Home } from 'lucide-react';
 
@@ -6,14 +6,32 @@ const Header = () => {
   const { language, setLanguage, t } = useLanguage();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
     
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        menuRef.current && 
+        !menuRef.current.contains(event.target as Node) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target as Node)
+      ) {
+        setIsMenuOpen(false);
+      }
+    };
+    
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
   }, []);
 
   const toggleMenu = () => {
@@ -68,6 +86,7 @@ const Header = () => {
               {language === 'lv' ? 'EN' : 'LV'}
             </button>
             <button 
+              ref={buttonRef}
               onClick={toggleMenu}
               className="text-[#81b622] focus:outline-none"
             >
@@ -77,8 +96,13 @@ const Header = () => {
         </div>
         
         {/* Mobile Navigation Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 bg-white rounded-lg shadow-lg">
+        <div 
+          ref={menuRef}
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMenuOpen ? 'max-h-64 opacity-100 mt-4' : 'max-h-0 opacity-0'
+          }`}
+        >
+          <div className="bg-white rounded-lg shadow-lg py-4">
             <div className="flex flex-col space-y-4 px-4">
               <a 
                 href="#home" 
@@ -117,7 +141,7 @@ const Header = () => {
               </a>
             </div>
           </div>
-        )}
+        </div>
       </div>
     </header>
   );
