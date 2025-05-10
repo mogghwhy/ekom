@@ -42,6 +42,10 @@ const Header = () => {
     setLanguage(language === 'lv' ? 'en' : 'lv');
   };
 
+  const navLinkClasses = `text-[#81b622] transition-colors font-medium ${
+    isScrolled ? 'hover:text-[#3d550c]' : 'hover:text-[#ecf87f]'
+  }`;
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -59,10 +63,10 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-6">
-            <a href="#home" className="text-[#81b622] hover:text-[#ecf87f] transition-colors font-medium">{t('nav.home')}</a>
-            <a href="#ekomini" className="text-[#81b622] hover:text-[#ecf87f] transition-colors font-medium">{t('nav.ekomini')}</a>
-            <a href="#portfolio" className="text-[#81b622] hover:text-[#ecf87f] transition-colors font-medium">{t('nav.portfolio')}</a>
-            <a href="#about" className="text-[#81b622] hover:text-[#ecf87f] transition-colors font-medium">{t('nav.about')}</a>
+            <a href="#home" className={navLinkClasses}>{t('nav.home')}</a>
+            <a href="#ekomini" className={navLinkClasses}>{t('nav.ekomini')}</a>
+            <a href="#portfolio" className={navLinkClasses}>{t('nav.portfolio')}</a>
+            <a href="#about" className={navLinkClasses}>{t('nav.about')}</a>
             <a 
               href="#contact" 
               className="px-4 py-2 bg-[#81b622] text-white rounded hover:bg-[#3d550c] transition-colors font-medium"
